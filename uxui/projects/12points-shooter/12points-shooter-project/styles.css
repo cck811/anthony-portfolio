@@ -1,0 +1,293 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~CSS Quick Reset~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+img {
+    display: block; 
+    max-width: 100%; /* keeps image within container*/
+    height: auto; /*maintain image proportion and no stretch */
+}
+nav ul {
+    list-style-type: none; /*no bullets */
+    margin: 0;
+    padding: 0
+}
+a {
+    text-decoration: none; /*remove underline for all clickable link*/
+}
+h1, h2, h3, h4, p { /*removing the default padding*/
+    margin: 0;
+    padding: 0;
+    font-family: 'Rye', sans-serif;
+}
+p, h3 { /*change default margin*/
+    margin-bottom: 1em; 
+}
+h1, h2 { /*change default margin*/
+    margin-bottom: .3em; 
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~CSS Start~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+body {
+    text-align: center;
+    background-color: #8F887C;
+    color: #F9F1DE;
+    margin: 0;
+    display: flex;
+    height:100vh;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Game Container~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#game-container {
+    max-width: 730px;
+    min-width: 730px;
+    height: 650px;
+    margin: auto;
+    padding: 20px 20px 30px 20px;
+    background: url(images/wood.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: contain;
+    box-shadow: 0 0 50px rgb(0, 0, 0);
+    border-radius: 20px;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Game Name~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+h1 {
+    font-size:60px;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Score Section~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#scoreboard {
+    display: flex;
+    justify-content: space-around;
+    margin:0;
+}
+
+.score {
+    padding: 10px;
+}
+
+.score h2 {
+    margin: 0;
+}
+
+.score p {
+    margin: 5px 0 0;
+    font-size: 1.2em;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Turn Message Section~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#messages-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 20px;
+    width: 380px;
+    height: 90px;
+    background-color: #F9F1DE;
+    color:#6C5038;
+    border-radius: 10px;
+    border: solid;
+    border-color: #523d2a;
+    border-width: 5px;
+}
+
+#turnMessages {
+    font-family: 'Rye', sans-serif;
+    margin-top: auto;
+}
+
+#messages {
+    font-family: 'Rye', sans-serif;
+    margin: auto;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Cards~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#card-area {
+    width: 400px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.card {
+    font-family: 'Rye', sans-serif;
+    width: 110px;
+    height:165px;
+    padding: 10px 20px;
+    margin: 10px;
+    background: url(images/card.png);
+    background-position: center;
+    background-color: #FDF3DE;
+    color: #362615;
+    border: solid;
+    border-color: #523d2a;
+    border-width: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    box-shadow: 0 0 7px rgb(0, 0, 0);
+}
+
+.card:hover {
+    background-color: #000000;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.434);
+    transform: scale(1.05);
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Win overlay~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#startgame {
+    padding: 10px 20px;
+    background-color: #362615;
+    color: rgb(222, 189, 154);
+    font-family: 'Rye', sans-serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5em;
+    margin: auto;
+    margin-top: 10px;
+}
+
+#startgame:hover {
+    background-color: #d1c9b7;
+}
+
+#winning-screen-background{
+    background-color: #0000007e;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+#winning-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #d1c9b7;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 55%;
+    left: 50%;
+    border-radius: 20px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.868);
+}
+
+#winning-messages {
+    font-family: 'Rye', sans-serif;
+    color: #362615;
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+#cowboy-image{
+    max-width: 70%;
+    margin-inline: auto;
+}
+
+#startgame-button-section{
+    margin-bottom: 20px;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Test Luck Button~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#testLuckButton {
+    padding: 10px 20px;
+    background-color: #362615;
+    color: rgb(222, 189, 154);
+    font-family: 'Rye', sans-serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin: 10px auto 20px auto;
+    display: block; 
+    }
+
+#testLuckButton:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Instructions Overlay~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#instructions-overlay {
+    display: none; /* Initially hidden */
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 75vh;
+    max-height: 650px;
+    max-width: 600px;
+    transform: translate(-50%, -50%);
+    background: #362615;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: left;
+    overflow-y: auto;
+}
+.overlay-content p{
+    margin-block: 1em;
+    line-height: 2em;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.overlay-content h2{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.overlay-content::-webkit-scrollbar {
+    display: none;
+  }
+
+#show-instructions{
+    font-size: 30px;
+    background: #ffffff00;
+    position: fixed;
+    top: 85%;
+    left: 85%;
+    border-radius: 50%;
+    border-width: 5px;
+    color: #FDF3DE;
+    border-color: #FDF3DE;
+    width: 70px;
+    height: 70px;
+}
+
+#show-instructions:hover{
+    background: #0000006e;
+}
+
+#close-instructions{
+    padding: 10px 20px;
+    background-color: #FDF3DE;
+    color: #362615;
+    font-family: 'Rye', sans-serif;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-inline: auto;
+    display: block;
+}
+
+#close-instructions:hover{
+    background-color: #362615;
+    border: solid;
+    border-radius: 5px;
+    color:#FDF3DE;
+    border-color: #FDF3DE;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~click~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+#clickImage {
+    position: absolute;
+    display: none;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    pointer-events: none; 
+}

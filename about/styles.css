@@ -1,0 +1,555 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~CSS Quick Reset~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+img {
+    display: block; 
+    max-width: 100%; /* keeps image within container*/
+    height: auto; /*maintain image proportion and no stretch */
+  }
+  nav ul {
+    list-style-type: none; /*no bullets */
+    margin: 0;
+    padding: 0
+  }
+  a {
+    text-decoration: none; /*remove underline for all clickable link*/
+  }
+  h1, h2, h3, h4, p { /*removing the default padding*/
+    margin: 0;
+    padding: 0;
+  }
+  p, h3 { /*change default margin*/
+    margin-bottom: 1em; 
+  }
+  h1, h2 { /*change default margin*/
+    margin-bottom: .3em; 
+  }
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f5f5f5;
+  }
+  
+  html, body {
+    margin: 0;
+    height: 100%;
+  }
+  html {
+    scroll-behavior: smooth; 
+    scrollbar-width: none;
+  }
+
+  /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~CSS Start~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+  
+  /*-----------Background-------------*/
+  #page-background{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%; /* Set your desired width */
+    height: 100%; /* Set your desired height */
+    /* max-height: 750px;
+    min-height: 750px; */
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgb(248, 246, 245) 0%, rgba(195,185,177,1) 90%, rgba(195,185,177,1) 100%);
+  }
+
+    /*--------------page background--------------------*/
+
+    #page-background {
+      position: fixed;
+      z-index: 1;
+      background: linear-gradient(180deg, rgb(248, 246, 245) 0%, rgba(195,185,177,1) 90%, rgba(195,185,177,1) 100%);
+      transition: background-color 0.3s; /* Smooth transition for background change */
+      background-color: rgba(255, 255, 255, 1);
+      overflow: hidden;
+      
+      /* Other styles remain the same */
+    }
+  
+    #background-wrap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2; /* Above the background color of index-page */
+    }
+
+    /* KEYFRAMES */
+    
+    @keyframes animateCloud {
+        0% {
+            margin-left: -1000px;
+        }
+        100% {
+            margin-left: 100%;
+        }
+    }
+
+      @keyframes animateCloudReverse {
+        0% {
+            margin-left: 130%; /* Start from the right side */
+        }
+        100% {
+            margin-left: -1000px; /* Move to the left, off the screen */
+        }
+    }
+      
+    @keyframes moveMoon {
+      0% { right: -100px; }
+      100% { right: 100%; }
+    }
+    
+    /* ANIMATIONS */
+    
+    .x1 {
+      animation: animateCloud 40s linear infinite;
+      transform: scale(0.60);
+    }
+    
+    .x2 {
+      animation: animateCloud 20s linear infinite;
+      transform: scale(0.3);
+    }
+    
+    .x3 {
+      animation: animateCloudReverse 50s linear infinite;
+      transform: scale(0.5);
+    }
+    
+    .x4 {
+      animation: animateCloudReverse 22s linear infinite;
+      transform: scale(0.45);
+    }
+    
+    .x5 {
+      animation: animateCloud 25s linear infinite;
+      transform: scale(0.55);
+    }
+    
+
+    .x6 {
+    animation: animateCloudReverse 37s linear infinite;
+    transform: scale(0.65);
+    }
+    
+
+    .cloud {
+      background: rgb(244, 239, 235);
+      background: linear-gradient(180deg, rgb(244, 239, 235) 0%, rgba(195,185,177,1) 94%, rgba(195,185,177,1) 100%);
+      border-radius: 100px;
+      height: 120px;
+      position: relative;
+      width: 350px;
+    }
+    
+    .cloud:after, .cloud:before {
+        background: rgb(244, 239, 235);
+      content: '';
+      position: absolute;
+      z-indeX: -1;
+    }
+    
+    .cloud:after {
+      border-radius: 100px;
+      height: 100px;
+      left: 50px;
+      top: -50px;
+      width: 100px;
+    }
+    
+    .cloud:before {
+      border-radius: 200px;
+      width: 180px;
+      height: 180px;
+      right: 50px;
+      top: -90px;
+    }
+
+    .moon {
+        position: absolute;
+        border-radius: 50%;
+        width: 100px;  /* Size of sun/moon */
+        height: 100px; /* Size of sun/moon */
+        background-color: rgba(220, 205, 192, 0.511); /* Moon color */
+        top: 20%;
+        right: -100px; /* Start off-screen */
+        animation: moveMoon 60s linear infinite;
+    }
+
+
+
+  /*--------------------------------------------Main--------------------------------------*/
+  main{
+    height: auto;
+    position: relative;
+    z-index: 2;
+  }
+    /*--------------Header-----------------*/
+        /*-----------------------Name and Logo-----------------------*/
+          .logo{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            user-select: none;
+            padding-left: 10px;
+            color: #000000;
+          }
+
+          .logo-img{
+            width: auto;
+            height: 40px;
+          }
+
+          #name{
+            margin-bottom:0;
+            font-weight:600;
+          }
+
+            /*-----------Top Navigation-------------*/
+          .top-nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            background-color: transparent;
+            color: #000000;
+            height: 50px;
+            padding: 1em;
+          }
+
+          li a {
+            color: #363636;
+          }
+          li a:hover {
+            color: #000000;
+            font-weight: bold;
+          }
+
+          #git-logo{
+            display: inline-block;
+            line-height: 4;
+            align-content: center;
+          }
+
+/*-----------Hamburger Menu-------------*/
+  .menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+
+  }
+  
+  .menu > li {
+    margin: 0 1rem;
+    overflow: hidden;
+  }
+  
+  .menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    position: relative;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  .menu-button {
+    display: block;
+    background-color: #000;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    border-radius: 2px;
+  }
+  .menu-button::before {
+    content: "";
+    margin-top: -8px;
+    background-color: #000;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    border-radius: 2px;
+  }
+  .menu-button::after {
+    content: "";
+    margin-top: 8px;
+    background-color: #000;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    border-radius: 2px;
+  }
+    /*-----------about---------------------*/
+    .about {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 80px;
+      margin-inline: auto;
+      padding-block: 100px;
+      animation: fade-in 1s;
+      animation-timing-function: ease-in;
+    }
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    /*-------------test--------------*/
+
+    .about > div {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+
+    }
+
+    .about picture {
+      width: 400px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .about div > div {
+      max-width: 500px;
+    }
+
+    .about h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #000000;
+    }
+
+    .about h2 {
+      color: #373333ae;
+      font-weight: 600;
+      font-size: 1.25rem;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #000000;
+    }
+
+      /*-----------resume button-------------*/
+        .resume-button-wrapper {
+          display: flex;
+          justify-content: flex-end;
+          margin-top: 20px;
+          gap: 12px;
+        }
+        .resume-button {
+          margin-top: 20px;
+          padding: 12px 24px;
+          background-color: #373333;
+          color: white;
+          text-decoration: none;
+          border-radius: 6px;
+          font-weight: bold;
+          transition: background-color 0.3s ease;
+
+        }
+        .resume-button:hover {
+          background-color: #000000;
+        }
+        #download {
+          text-decoration: underline;
+          color:#373333;
+          background-color: transparent;
+        }
+        #download:hover {
+          color: #000;
+        }
+        /*----------------------------------------*/
+        .social-icons {
+          display: flex;
+          gap: 16px;
+          margin-top: 20px;
+        }
+
+        .social-icons a {
+          font-size: 30px;
+          color: #373333ae;
+          transition: color 0.2s ease-in-out;
+        }
+
+        .social-icons a:hover {
+          color: #000000; /* or your accent color */
+        }
+  /*-----------Footer Section-------------*/
+    footer {
+      padding: 20px;
+      background-color: #373333;
+      color: #f5f5f5;
+      padding-inline: 120px;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        line-height: 1.5;
+    }
+
+    .social-logo{
+      line-height: 3;
+    }
+
+    .about-section, .contact-section {
+        max-width: 300px;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    nav ul li a {
+        color: #f5f5f5;
+        margin: 0 10px;
+    }
+
+    nav ul li a:hover {
+        color: #cfcfcf;
+    }
+
+    .contact-section p a{
+      color: #f5f5f5;
+      font-weight: bold;
+    }
+  
+  /* ~~~~~~~~~~~~~~~~~~~~~Media Queries~~~~~~~~~~~~~~~~~~~~~~~~~ */
+  
+  @media screen and (min-width: 200px) and (max-width: 767px) {
+                  /* Rules in here will apply if screens smaller than 768px(phone) */
+      body{
+      min-width: 350px;
+        /* fix all size dimentions when the screen is smller than 350 px */
+      }
+
+      .logo{
+        min-width:255px ;
+      }
+
+      /*-----------Hamburger Menu-------------*/
+      .menu-button-container {
+        display: flex;
+        z-index: 3;
+        position: relative;
+        padding-inline: 15px;
+      }
+      .menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 70px;
+        width: 100px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #f5f5f5ef;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.4s ease;
+        z-index: 3;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+      #menu-toggle:checked ~ .menu {
+        transform: scaleY(1);
+      }
+
+      .menu > li {
+        display: flex;
+        justify-content: center;
+        padding: 0.75em 0;
+        width: 100%;
+      }
+
+      .menu > li:not(:last-child) {
+        border-bottom: 2px solid #e8e8e8;
+      }
+        /*---------------------------about-----------------------------*/
+      .about {
+        margin-inline: 26px;
+        padding-block: 30px;
+      }
+      .about picture {
+        width: 100%;
+        height: auto;
+      }
+      .resume-button-wrapper {
+        flex-direction: column-reverse;
+        justify-content: center;
+      }
+      .resume-button {
+        align-self: center; /* prevents full-width stretch */
+        width: auto; /* ensures size based on text content */
+      }
+      /*---------------------------footer-----------------------------*/
+      .footer-content {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+      footer {
+        padding-inline: 50px;
+      } 
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 1022px) {
+                  /* Rules for medium-sized screens here */
+                  /* Rules in here will apply if screens is between 768px and 1022px (tablet) */
+    .about picture {
+      width: 500px;
+      height: auto;
+    }
+    .about {
+      margin-bottom: 50px;
+      margin-inline: 50px;
+      padding: 50px;
+    }
+      .resume-button-wrapper {
+        flex-direction: column-reverse;
+        justify-content: center;
+      }
+      .resume-button {
+        align-self: center; /* prevents full-width stretch */
+        width: auto; /* ensures size based on text content */
+      }
+    /*---------------------------footer-----------------------------*/
+    footer {
+        padding-inline: 100px;
+    }      
+    .footer-content {
+      text-align: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  
+  @media screen and (min-width: 1023px) {
+                  /* Rules in here will apply if screens is larger than 1024px (desktops) */
+                  /*should go at the bottom of your CSS file*/
+  }
+  /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */

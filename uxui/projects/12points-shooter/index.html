@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>12 Points Shooter – Interactive JavaScript Game | Anthony Chan Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="top-nav">
+    <div class="logo">
+      <a href="../../../index.html" class="logo">
+        <img class="logo-img" src="../../../images/logoW.svg" alt="logo">
+        <h2 id="name">ANTHONY CHAN</h2>
+      </a>
+    </div>
+    <input id="menu-toggle" type="checkbox" />
+    <label class="menu-button-container" for="menu-toggle">
+      <div class="menu-button"></div>
+    </label>
+    <ul class="menu">
+      <li><a href="../../../../index.html">Home</a></li>
+      <li><a href="../../../../resume/index.html">Resume</a></li>
+      <li><a href="../../../../contact/index.html">Contact</a></li>
+      <li><a href="https://github.com/cck811" id="git-logo"><i class="fa-brands fa-github fa-2xl" aria-label="GitHub"></i></a></li>
+    </ul>
+  </header>
+
+  <section class="project-details">
+    <div class="project-header">
+      <h1>12 Points Shooter – Interactive JavaScript Game</h1>
+      <img src="images/12points-overview.jpg" alt="12 Points Shooter Banner">
+    </div>
+    <div class="project-section">
+      <h3>Project Demo: <a href="12points-shooter-project/index.html" target="_blank">Link</a></h3>
+    </div>
+
+    <div class="project-content">
+      <div class="project-section">
+        <h2>Game Overview</h2>
+        <p><strong>12 Point Shooter</strong> is a fast-paced 2-player web game designed for browsers using HTML, CSS, and JavaScript. Players take turns selecting cards to accumulate points, while dodging hidden penalties. Strategic risk-taking is introduced through a “Test My Luck” button, allowing players to pick twice per turn, but with the risk of losing it all. The game combines user-friendly interaction design, animation, and audio to create an engaging digital experience.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Game Rules</h2>
+        <p>
+          In <strong>12 Point Shooter</strong>, players take turns picking cards to reach 12 points first. Most cards add points, but some subtract or reset your score. You can test your luck once per turn to pick two cards instead of one. After each turn, play switches automatically. The first to 12 wins.
+        </p>
+      </div>
+
+      <div class="project-section">
+        <h2>Design Process</h2>
+        <p>Before development began, I mapped out the game logic with a flowchart to visualize the gameplay sequence and player decisions. I also created a detailed UI layout comp to guide interface placement and ensure responsiveness across screen sizes. The chosen color palette was selected for contrast, readability, and visual harmony to match the name of the game.</p>
+        <img src="images/flowchart.jpg" alt="Game Logic Flowchart" class="project-image">
+        <img src="images/comp.jpg" alt="UI Layout Design Comp" class="project-image">
+        <img src="images/color.png" alt="Color Palette" class="project-image">
+      </div>
+
+      <div class="project-section">
+        <h2>Development & Features</h2>
+        <p>The game logic is built using HTML, CSS, and JavaScript with a clean modular structure. Two players take turns picking from six shuffled cards, each with different effects. Some cards reward points, while others punish by subtracting or resetting the score. A “Test My Luck” button added a risk factor to the game.</p>
+        <img src="images/code.png" alt="Test My Luck Code Logic" class="project-image">
+        <p>Alongside the core mechanics, I implemented:</p>
+        <ul>
+          <li><strong>Card Shuffling:</strong> Randomly reassigns values after each turn to prevent predictability.</li>
+          <li><strong>Sound Effects:</strong> Custom gunshot sound on every card pick, and a celebratory jingle when the game is won.</li>
+          <li><strong>Click Visual Feedback:</strong> Clicking anywhere on the screen triggers a gunshot sound and shows a temporary bullet-hole effect at the clicked location for immersive feedback.</li>
+          <li><strong>Winning Screen:</strong> A full-screen overlay with custom messaging appears when a player reaches 12 points.</li>
+          <li><strong>Cowboy Character:</strong> A stylized cartoon cowboy illustration was added in the final version to add visual charm and personality to the interface.</li>
+        </ul>
+        <img src="images/cowboy.jpg" alt="Cartoon Cowboy Character" class="project-image">
+        <img src="images/click.gif" alt="Bullet Hole Effect" class="project-image">
+      </div>
+
+      <div class="project-section">
+        <h2>User Feedback</h2>
+        <p>
+          The initial prototype focused on testing the core game mechanics: six randomized buttons, turn-based scorekeeping for two players, and a basic UI. This version was intentionally minimal to validate the game logic. I shared the prototype with a small group of users and gathered helpful feedback that informed the final iteration.
+        </p>
+        <img src="images/feedback.jpg" alt="feedback" class="project-image">
+        <p>
+          These insights led me to add a ‘Test My Luck’ button for risk-based decisions, enhance the UI with a Western-themed layout and cartoon character, implement custom gunshot and win sounds, and create a click animation effect resembling a bullet hole to match the game’s style and improve engagement.
+        </p>
+      </div>
+
+      <div class="project-section">
+        <h2>Challenges & Learnings</h2>
+        <p>
+          One of the biggest challenges was creating a balanced game mechanic that felt both fair and engaging. Translating game logic into functional JavaScript—especially managing turn logic, score tracking, and risk dynamics—required precise event handling and careful debugging.
+        </p>
+        <p>
+          I also learned how important sound and visual feedback are to the game experience. Implementing dynamic UI elements like modals, animations, and clickable effects pushed my understanding of how front-end interactivity can heighten user engagement.
+        </p>
+      </div>
+
+      <div class="project-section">
+        <h2>Reflections</h2>
+        <p>
+          This project deepened my appreciation for the synergy between design and development. What began as a simple logic test evolved into a fully themed, interactive web game that leverages both visual storytelling and UX principles.
+        </p>
+        <p>
+          I realized that even small enhancements—like the sound effects or “Test My Luck” mechanic—can significantly improve playability and immersion. More importantly, I saw how early prototyping and user feedback are crucial to refining a concept into a delightful experience.
+        </p>
+      </div>
+      <!-- Check Out My Other Projects -->
+      <div class="project-section">
+        <hr>
+      </div>
+      <div class="project-section" id="other-projects">
+        <h2>Check Out My Other Projects</h2>
+        <div class="other-projects-flex">
+          <a href="../simulator/index.html" class="project-preview">
+            <img src="../../images/sim-overview.jpg" alt="Simulator">
+            <h3>Economic Simulator</h3>
+          </a>
+          <a href="../mad-libs/index.html" class="project-preview">
+            <img src="../../images/mad-libs-hero.jpg" alt="Mad Libs">
+            <h3>Mad Libs 3.0</h3>
+          </a>
+        </div>
+      </div>
+      <div class="project-section">
+        <div class="back-button">
+          <a href="../../index.html" class="back-link">◀ Back to Index </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="about-section">
+        <h3>About Me</h3>
+        <p>I am a product designer specializing in UX/UI design with a passion for creating intuitive and engaging user experiences. Thank you for visiting my portfolio.</p>
+      </div>
+      <nav>
+        <h3>Social Media</h3>
+        <ul>
+          <li><a href="https://facebook.com" target="_blank" class="social-logo" aria-label="Facebook"><i class="fab fa-facebook fa-2xl"></i></a></li>
+          <li><a href="https://twitter.com" target="_blank" class="social-logo" aria-label="Twitter"><i class="fab fa-twitter-square fa-2xl"></i></a></li>
+          <li><a href="https://linkedin.com" target="_blank" class="social-logo" aria-label="LinkedIn"><i class="fab fa-linkedin fa-2xl"></i></a></li>
+        </ul>
+      </nav>
+      <div class="contact-section">
+        <h3>Contact Me</h3>
+        <p>Feel free to reach out for any project inquiries or collaborations.</p>
+        <p>Email: <a href="mailto:ackchan@ucdavis.edu">ackchan@ucdavis.edu</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="button scroll" id="scroll-to-top-button" aria-label="Scroll to Top">
+    <span class="scroll-up-arrow"></span>
+  </a>
+</body>
+</html>

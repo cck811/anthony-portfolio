@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <title>Build Mad Lib 3.0</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div id="instructions-overlay">
+        <div class="overlay-content">
+            <article>
+                <h2>What is a Mad Libs?</h2>
+                <p>A classic game perfect for any mood, Mad Libs is your ticket to fun, creativity, and giggles. So, let your imagination run wild and enjoy the ride!</p>
+                <p>How does it work? Simple! You'll be prompted to input various words – nouns, verbs, exclamations, and more. These words will then be magically woven into a story, transforming ordinary sentences into something hilariously extraordinary.</p>
+
+            </article>
+            <button id="close-instructions">Close</button>
+        </div>
+    </div>
+
+    <main>
+        <header>
+            <h1>Mad Libs 3.0</h1>
+        </header>
+        <div class="container">
+            <img src="images/park.png" alt="story picture">
+
+            <p>Here a glimpse into what your mad libs will be about!</p>
+
+            <form id="myform">
+                <div class="input-group">
+                    <label for="word1">Give me an animal:</label>
+                    <input type="text" id="word1" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="word2">Name a vehicle:</label>
+                    <input type="text" id="word2" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="word3">Shout an exclamation!:<br><span class="question-explain">(e.g. What the heck!)</span></label>
+                    <input type="text" id="word3" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="word4">Give me a name:
+                    </label>
+                    <input type="text" id="word4" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="word5">How do you feel right now?<br><span class="question-explain">(an emotion)</span></label>
+                    <input type="text" id="word5" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="word6">Name a sport or game:</label>
+                    <input type="text" id="word6" required>
+                </div>
+
+                <div class="buttons">
+                    <button type="button" id="random">Random</button>
+                    <button type="submit" id="creatStoryBtn" >Create Story</button>
+                    <button type="reset" id="clear">Clear</button>
+                </div>
+            </form>
+        </div>
+        
+        <div id="story-overlay">            
+            <div id="madlib">
+                <article id="story">
+                    <h2>Mad Libs Story</h2>
+                    <p id="p1"></p>
+                    <p id="p2"></p>
+                    <p id="p3"></p>
+                    <p id="p4"></p>
+                </article>
+                <button id="close">Close</button>
+            </div>
+        </div>
+    </main>
+
+    <button id="show-instructions">?</button>
+</body>
+
+</html>

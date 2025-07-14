@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Madlibs 3.0 – JavaScript Game Development & UX/UI Evolution | Anthony Chan Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="top-nav">
+    <div class="logo">
+      <a href="../../../index.html" class="logo">
+        <img class="logo-img" src="../../../images/logoW.svg" alt="logo">
+        <h2 id="name">ANTHONY CHAN</h2>
+      </a>
+    </div>
+    <input id="menu-toggle" type="checkbox" />
+    <label class="menu-button-container" for="menu-toggle">
+      <div class="menu-button"></div>
+    </label>
+    <ul class="menu">
+      <li><a href="../../../../index.html">Home</a></li>
+      <li><a href="../../../../resume/index.html">Resume</a></li>
+      <li><a href="../../../../contact/index.html">Contact</a></li>
+      <li><a href="https://github.com/cck811" id="git-logo"><i class="fa-brands fa-github fa-2xl" aria-label="GitHub"></i></a></li>
+    </ul>
+  </header>
+
+  <section class="project-details">
+    <div class="project-header">
+      <h1>Madlibs 3.0 – JavaScript Game Development & UX/UI Evolution</h1>
+      <img src="images/madlibs-hero.jpg" alt="Mad Libs Hero Banner">
+    </div>
+    <div class="project-section">
+      <h3>Project Demo: <a href="mad-libs-project/index.html" target="_blank">Link</a></h3>
+    </div>
+    <div class="project-content">
+      <div class="project-section">
+        <h2>Project Overview</h2>
+        <p>This project was created using HTML, CSS, and JavaScript. It was designed as an interactive game with simple input prompts and multiple story outputs. It evolved through three iterations, with each version incorporating user feedback and new design strategies. The final version, Madlibs 3.0, delivers a significantly improved user experience, functional enhancements, and playful visual design.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Version History</h2>
+        <p>In <strong>Madlibs VR1</strong>, I built a basic prototype that collected user inputs and redirected them to a separate page to display the completed story. The experience was functional but disjointed, lacking stylistic coherence and seamless interaction.</p>
+        <img src="images/vr1.jpg" alt="VR1" class="project-image">
+        <p>For <strong>Madlibs VR2</strong>, I improved the user interface with a more cohesive visual layout, introduced a <em>Clear</em> button for easier input resets, and replaced the page redirection with a dynamic pop-up window that displayed the story inline—improving the overall flow and keeping the experience on a single page.</p>
+        <img src="images/vr2.jpg" alt="VR2" class="project-image">
+        <img src="images/story.jpg" alt="VR2 Story" class="project-image">
+        <p>
+          <strong>Madlibs 3.0</strong> includes many visual and functional improvements. I redesigned the layout for clarity and centered alignment, updated button colors, and added hover animations. A <em>Random</em> button was added to auto-fill input prompts with playful suggestions. I also implemented an introduction popup that explains how to play the game, which can be reopened at any time using a “?” button.
+        </p>
+        <img src="images/background.png" alt="Background Improvement" class="project-image">
+        <img src="images/hover.gif" alt="Visual Enhancement" class="project-image">
+        <img src="images/introBtn.gif" alt="Intro Popup Interaction" class="project-image">
+        <img src="images/intro.png" alt="Intro Popup View" class="project-image">
+        <img src="images/random.gif" alt="Random Button Functionality" class="project-image">
+      </div>
+
+      <div class="project-section">
+        <h2>Story Expansion</h2>
+        <p>To improve replay value, I introduced a pool of story templates. A random template is selected each playthrough, which stitches the user’s inputs into one of several funny, unique narratives.</p>
+        <img src="images/code.png" alt="Additional Story Code Sample" class="project-image">
+      </div>
+
+      <div class="project-section">
+        <h2>User Feedback</h2>
+        <p>
+          User feedback was instrumental in shaping each version of Madlibs. Early testers of <strong>Madlibs 1.0</strong> found the redirection to a new page disruptive and confusing. They also noted the need for clearer instructions and a more engaging layout.
+        </p>
+        <img src="images/feedback1.jpg" alt="Feedback Driven Improvements" class="project-image">
+        <p>
+          With <strong>Madlibs 2.0</strong>, users appreciated the streamlined story popup that stayed on the same page. However, some still found the interface too plain and suggested features to make it more fun and dynamic—such as random word suggestions and better visual design.
+        </p>
+        <img src="images/feedback2.jpg" alt="Feedback Driven Improvements" class="project-image">
+        <p>
+          These insights directly informed the development of <strong>Madlibs 3.0</strong>, which introduced a playful UI, randomized input button, improved font legibility, hover effects, and a helpful introductory popup. The changes led to positive feedback around ease of use, replay value, and overall enjoyment.
+        </p>
+      </div>
+
+      <div class="project-section">
+        <h2>Process Work</h2>
+        <p>
+          From the start, I planned out the game's structure through flowcharts and layout sketches. The initial concept included separate pages for inputs and results, while later sketches for version 2.0 focused on keeping the interaction contained within a single interface. These sketches helped me visualize the user journey and refine UI components before implementation.
+        </p>
+        <img src="images/flow.png" alt="Madlibs Development Flowchart" class="project-image">
+        <img src="images/layout.jpg" alt="UI Layout Sketches from 1.0 to 2.0" class="project-image">
+      </div>
+
+      <div class="project-section">
+        <h2>Reflections</h2>
+        <p>This project helped refine my front-end development skills and deepened my understanding of how micro UX changes—like clear onboarding or visual feedback—can dramatically affect usability and engagement.</p>
+      </div>
+      <!-- Check Out My Other Projects -->
+      <div class="project-section">
+        <hr>
+      </div>
+      <div class="project-section" id="other-projects">
+        <h2>Check Out My Other Projects</h2>
+        <div class="other-projects-flex">
+          <a href="../simulator/index.html" class="project-preview">
+            <img src="../../images/sim-overview.jpg" alt="Simulator">
+            <h3>Economic Simulator</h3>
+          </a>
+          <a href="../animal-rescue/index.html" class="project-preview">
+            <img src="../../images/animal-rescue.jpg" alt="Animal Rescue California">
+            <h3>Animal Rescue California</h3>
+          </a>
+        </div>
+      </div>
+      <div class="project-section">
+        <div class="back-button">
+          <a href="../../index.html" class="back-link">◀ Back to Index </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="about-section">
+        <h3>About Me</h3>
+        <p>I am a product designer specializing in UX/UI design with a passion for creating intuitive and engaging user experiences. Thank you for visiting my portfolio.</p>
+      </div>
+      <nav>
+        <h3>Social Media</h3>
+        <ul>
+          <li><a href="https://facebook.com" target="_blank" class="social-logo" aria-label="Facebook"><i class="fab fa-facebook fa-2xl"></i></a></li>
+          <li><a href="https://twitter.com" target="_blank" class="social-logo" aria-label="Twitter"><i class="fab fa-twitter-square fa-2xl"></i></a></li>
+          <li><a href="https://linkedin.com" target="_blank" class="social-logo" aria-label="LinkedIn"><i class="fab fa-linkedin fa-2xl"></i></a></li>
+        </ul>
+      </nav>
+      <div class="contact-section">
+        <h3>Contact Me</h3>
+        <p>Feel free to reach out for any project inquiries or collaborations.</p>
+        <p>Email: <a href="mailto:ackchan@ucdavis.edu">ackchan@ucdavis.edu</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="button scroll" id="scroll-to-top-button" aria-label="Scroll to Top">
+    <span class="scroll-up-arrow"></span>
+  </a>
+</body>
+</html>

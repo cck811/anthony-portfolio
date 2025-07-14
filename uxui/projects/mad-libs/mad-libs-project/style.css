@@ -1,0 +1,316 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~CSS Quick Reset~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+img {
+    display: block; 
+    max-width: 100%; /* keeps image within container*/
+    height: auto; /*maintain image proportion and no stretch */
+}
+nav ul {
+    list-style-type: none; /*no bullets */
+    margin: 0;
+    padding: 0
+}
+a {
+    text-decoration: none; /*remove underline for all clickable link*/
+}
+h1, h2, h3, h4, p { /*removing the default padding*/
+    margin: 0;
+    padding: 0;
+    
+}
+p, h3 { /*change default margin*/
+    margin-bottom: 1em; 
+}
+h1, h2 { /*change default margin*/
+    margin-bottom: .3em; 
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~CSS Start~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fbfbfb;
+    background-image:  radial-gradient(#a7a7a7 1.5px, transparent 1.5px), radial-gradient(#a7a7a7 1.5px, #f6f6f6 1.5px);
+    background-size: 60px 60px;
+    background-position: 0 0,30px 30px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    height:100vh;
+}
+
+main {
+    height: auto;
+    width: 850px;
+    max-width: 850px;
+    background: linear-gradient(45deg, #6f80bb 25%, transparent 25%), linear-gradient(315deg, #6f80bb 25%, transparent 25%),linear-gradient(45deg, transparent 24%,#bebebe 25%, #bebebe 45%, transparent 45%), linear-gradient(315deg, transparent 24%,#bebebe 25%, #bebebe 45%, transparent 45%);
+        background-size: 7em 7em;
+        background-color: #6f80bb;
+        opacity: 1;
+    margin: auto;
+    padding: 20px;
+    padding-top:10px;
+    border-radius: 10px;
+    border: 5px solid #000000;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Header~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+header {
+    font-family: "Irish Grover";
+    font-size: xx-large;
+    text-align: center;
+    padding: 0;
+    color: #EC5349;
+    text-shadow: 7px 7px #000000;
+    height: 10%; /* Adjust based on your header size */
+}
+
+h1{
+    font-size: 3em;
+    margin-bottom: 0;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Game container~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.container {
+    max-width: 600px; /* Adjust width to not exceed main */
+    background-color: #fdfdfd;
+    margin: 10px auto;
+    padding: 15px;
+    border: 5px solid #000000;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgb(0, 0, 0);
+    text-align: center;
+}
+
+p {
+    padding: 10px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+#myform{
+    margin-bottom: 0;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    align-items : center;
+    margin-bottom: 15px;
+}
+
+input[type="text"]:hover {
+    box-shadow: 0px 0px 10px 2px rgb(236, 192, 73);
+}
+
+label {
+    display: inline-block;
+    width: 250px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.question-explain{
+    color: #aaaaaa;
+    font-size: 14px;
+}
+
+input[type="text"] {
+    width:auto;
+    padding: 8px;
+    border: 3px solid #000000;
+    border-radius: 5px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~Buttons~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+button {
+    font-size: 18px;
+    font-weight:bold;
+    color: #000000;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 30px;
+    border: 4px solid #000000;
+    margin-block: 10px;
+}
+
+.buttons {
+    margin:auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    max-width: 500px;
+}
+
+#creatStoryBtn {
+    background-color: #EC5349;
+    padding-inline: 20px;
+    color: #ffffff;
+}
+
+#creatStoryBtn:hover {
+    box-shadow: 0px 5px 5px 0px #626262;
+    border: 4px solid #000000;
+    color: #000000;
+}
+
+#clear{
+    width: 110px;
+    color: #868686;
+    border: none;
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+#clear:hover {
+    background-color: #868686;
+    border: 4px solid #868686;
+    color: #ffffff;
+}
+
+#random{
+    background-color: #ffffff;
+    border: 4px solid #ffc40000;
+    text-decoration: underline;
+    color: #dca800;
+}
+
+#random:hover {
+    background-color: #dca800;
+    color: #ffffff;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Story Overlay~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+#story-overlay{
+    display: none; /* Initially hidden */
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+#madlib{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 490px;
+    width: 450px;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h2{
+    text-align: center;
+}
+
+#p1, #p2, #p3, #p4 {
+    background-color:transparent;
+}
+
+#close{
+    margin-inline: auto;
+    margin-bottom: 0;
+    display: block;
+    width:93px;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Instructions Overlay~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#instructions-overlay {
+    display: none; /* Initially hidden */
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(7px);
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+
+
+.overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 490px;
+    width: 450px;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 5px solid #000000;
+}
+
+.overlay-content p{
+    margin-block: 1em;
+    line-height: 2em;
+}
+
+.overlay-content h2{
+    font-size: 34px;
+}
+
+.overlay-content::-webkit-scrollbar {
+    display: none;
+  }
+
+#show-instructions{
+    font-size: 25px;
+    background-color: transparent;
+    position: fixed;
+    top: 85%;
+    left: 85%;
+    border: 4px solid #545454;
+    color: #545454;
+    width: 53px;
+}
+
+#show-instructions:hover {
+    box-shadow: 0px 0px 10px 2px #ffc400;
+    border-color: #ffc400;
+    background-color: transparent;
+    color: #ffc400;
+}
+
+#close-instructions{
+    margin-inline: auto;
+    margin-bottom: 0;
+    display: block;
+    width:93px;
+    color: #6f80bb;
+    background-color: transparent;
+    border: 4px solid #6f80bb;
+}
+
+#close-instructions:hover{
+    background-color: #6f80bb;
+    color: #ffffff;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~Footer~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+footer {
+    height: 10%; /* Adjust based on your footer size */
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */

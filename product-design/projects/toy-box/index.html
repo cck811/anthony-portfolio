@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Magic Toy Box | Anthony Chan Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="top-nav">
+    <div class="logo">
+      <a href="../../../index.html" class="logo">
+        <img class="logo-img" src="../../../images/logoW.svg" alt="logo">
+        <h2 id="name">ANTHONY CHAN</h2>
+      </a>
+    </div>
+    <input id="menu-toggle" type="checkbox" />
+    <label class="menu-button-container" for="menu-toggle">
+      <div class="menu-button"></div>
+    </label>
+    <ul class="menu">
+      <li><a href="../../../../index.html">Home</a></li>
+      <li><a href="../../../../resume/index.html">Resume</a></li>
+      <li><a href="../../../../contact/index.html">Contact</a></li>
+      <li><a href="https://github.com/cck811" id="git-logo"><i class="fa-brands fa-github fa-2xl" aria-label="GitHub"></i></a></li>
+    </ul>
+  </header>
+
+  <section class="project-details">
+    <div class="project-header">
+      <h1>Magic Toy Box</h1>
+      <p>A playful blend of circuitry, CAD, and sleight of hand</p>
+      <img src="images/magic-toy-box-overview.jpg" alt="Magic Toy Box Overview">
+    </div>
+    <div class="project-content">
+      <div class="project-section">
+        <h2>Overview</h2>
+        <p>This whimsical project brings together electronics, 3D printing, and mechanical design to create a magician-inspired interactive toy box. Inspired by a magician illustration on a board game, this box lets users drop in a coin and then perform a little magic trick — swapping the coin via a hidden mechanical disc.</p>
+      </div>
+      <div class="project-section">
+        <h2>How It Works</h2>
+        <p>Users place a coin into a visible slot on top of a rotating disc. Once placed, they close the lid. On the back of the toy box is a concealed button that activates a servo motor, rotating the disc and swapping out the coin with another underneath — creating the illusion that the coin has magically changed or vanished.</p>
+        <img src="images/demo.gif" alt="Demo" class="project-image">
+      </div>
+      <div class="project-section">
+        <h2>Tools &amp; Materials</h2>
+        <ul>
+          <li>Adafruit Circuit Playground Express</li>
+          <li>Servo motor for disc rotation</li>
+          <li>Custom-designed 3D printed parts</li>
+          <li>CAD modeling (for housing and mechanical disc)</li>
+          <li>Soldering and assembly tools</li>
+        </ul>
+      </div>
+      <div class="project-section">
+        <h2>Design Process</h2>
+        <p>The initial idea emerged from playful visual inspiration and the desire to experiment with electronics and motion. I designed the disc and coin housing in CAD, allowing for precise fit and function. After printing prototypes, I refined the dimensions and wiring to ensure reliable performance. The shell was designed to hide the mechanism while allowing easy interaction with both the coin slot and hidden button.</p>
+        <img src="images/build.jpg" alt="Assembly process">
+      </div>
+      <div class="project-section">
+        <h2>Reflections</h2>
+        <p>This small-scale project helped me explore combining play with mechanical interaction. It deepened my understanding of servo motor calibration, component housing design, and circuit integration in tight spaces. More than anything, it reaffirmed my love for playful design and building with both imagination and precision.</p>
+      </div>
+            <!-- Check Out My Other Projects -->
+      <div class="project-section">
+        <hr>
+      </div>
+      <div class="project-section" id="other-projects">
+        <h2>Check Out My Other Projects</h2>
+        <div class="other-projects-flex">
+          <a href="../spin-top/index.html" class="project-preview">
+            <img src="../../images/spin-top-thumb.jpg" alt="Spin Top">
+            <h3>Hurricane Spin Top</h3>
+          </a>
+          <a href="../freeway-wind-turbine/index.html" class="project-preview">
+            <img src="../../images/freeway-wind-turbine.jpg" alt="Freeway Wind Turbine">
+            <h3>Freeway Wind Turbine</h3>
+          </a>
+        </div>
+      </div>
+      <div class="project-section">
+        <div class="back-button">
+          <a href="../../index.html" class="back-link">◀ Back to Index </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="about-section">
+        <h3>About Me</h3>
+        <p>I am a product designer specializing in UX/UI design with a passion for creating intuitive and engaging user experiences. Thank you for visiting my portfolio.</p>
+      </div>
+      <nav>
+        <h3>Social Media</h3>
+        <ul>
+          <li><a href="https://facebook.com" target="_blank" class="social-logo" aria-label="Facebook"><i class="fab fa-facebook fa-2xl"></i></a></li>
+          <li><a href="https://twitter.com" target="_blank" class="social-logo" aria-label="Twitter"><i class="fab fa-twitter-square fa-2xl"></i></a></li>
+          <li><a href="https://linkedin.com" target="_blank" class="social-logo" aria-label="LinkedIn"><i class="fab fa-linkedin fa-2xl"></i></a></li>
+        </ul>
+      </nav>
+      <div class="contact-section">
+        <h3>Contact Me</h3>
+        <p>Feel free to reach out for any project inquiries or collaborations.</p>
+        <p>Email: <a href="mailto:ackchan@ucdavis.edu">ackchan@ucdavis.edu</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="button scroll" id="scroll-to-top-button" aria-label="Scroll to Top">
+    <span class="scroll-up-arrow"></span>
+  </a>
+</body>
+</html>
