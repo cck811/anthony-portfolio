@@ -427,9 +427,13 @@ nav ul li a:hover {
       #category-page {
       background-color: #00ccff;
       }
-      .logo{
-        min-width:255px ;
+      #name{
+        font-size: 1.1em;
       }
+      .logo-img {
+        height: 27px;
+      }
+      
       .greeting{
       font-size: small;
   

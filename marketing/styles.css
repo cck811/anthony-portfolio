@@ -529,6 +529,12 @@ footer nav ul li a:hover {
 
 /* ~~~~~~~~~~~~~~~~~~~~~Media Queries~~~~~~~~~~~~~~~~~~~~~~~~~ */
 @media screen and (max-width: 767px) {
+  #name{
+    font-size: 1.1em;
+  }
+  .logo-img {
+    height: 27px;
+  }
 .counter-box p{
   padding-block: 5px;
   padding-inline: 20px;

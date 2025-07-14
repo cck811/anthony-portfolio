@@ -496,9 +496,13 @@ img {
         /* fix all size dimentions when the screen is smller than 350 px */
       }
 
-      .logo{
-        min-width:255px ;
+      #name{
+        font-size: 1.1em;
       }
+      .logo-img {
+        height: 27px;
+      }
+      
 
       /*-----------Hamburger Menu-------------*/
       .menu-button-container {
