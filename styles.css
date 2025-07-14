@@ -302,7 +302,7 @@ img {
       width: 1600px;
       height: 1070px;
       z-index: 10;
-      animation: introFadeIn 6s;
+      animation: introFadeIn 3s;
     }
 
     .hero-avatar{
@@ -313,10 +313,12 @@ img {
       width: 670px;
       height: 950px;
       z-index: 10;
-      animation: fadeIn 4s;
+      animation: fadeIn 5s;
     }
     @keyframes fadeIn {
       0% {opacity: 0; 
+      }
+      70% {opacity: 0;
       }
       100% {
         opacity: 1; }
@@ -332,7 +334,7 @@ img {
       border-radius: 50%;
       transform: translate(-50%, -50%);
       z-index: 7;
-      animation: introFadeIn 5s;
+      animation: circleFadeIn 5s;
     }
     .stationary-circle {
       position: absolute;
@@ -344,8 +346,14 @@ img {
       border-radius: 50%;
       transform: translate(-50%, -50%);
       z-index: 1;
-      animation: introFadeIn 5s;
+      animation: circleFadeIn 5s;
     }
+    @keyframes circleFadeIn {
+      0% {opacity: 0;
+      }
+      70% {
+        opacity: 1; }
+      }
 
     .cloud {
       background: rgb(244, 239, 235);
