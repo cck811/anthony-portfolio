@@ -33,8 +33,6 @@ img {
     height: 100%;
     scroll-behavior: smooth; 
     overflow-x: hidden;
-    scrollbar-width: none;
-    min-height: 3000px;
   }
 
   /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~CSS Start~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
